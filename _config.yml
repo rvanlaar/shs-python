@@ -32,3 +32,4 @@ html:
   use_repository_button: true
 exclude_patterns:
   - .venv/*
+  - R-toetsen/*
