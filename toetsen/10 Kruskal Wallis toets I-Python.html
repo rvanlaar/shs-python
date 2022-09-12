@@ -1,0 +1,1136 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Toepassing &#8212; My sample book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Toepassing" href="11%20Chi-kwadraat%20toets%20voor%20goodness%20of%20fit%20en%20binomiaaltoets-Python.html" />
+    <link rel="prev" title="Toepassing" href="09%20Friedmans%20ANOVA%20I-Python.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My sample book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../markdown.html">
+   Markdown Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../markdown-notebooks.html">
+   Notebooks with MyST Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notebooks.html">
+   Content with notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01%20One%20sample%20t-toets-Python.html">
+   Toepassing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02%20Gepaarde%20t-toets-Python.html">
+   Toepassing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03%20Ongepaarde%20t-toets-Python.html">
+   Toepassing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04%20Repeated%20measures%20ANOVA-Python.html">
+   Toepassing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05%20One-way%20ANOVA-Python.html">
+   Toepassing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06%20Tekentoets%20I-Python.html">
+   Toepassing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07%20Wilcoxon%20signed%20rank%20toets%20I-Python.html">
+   Toepassing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08%20Mann-Whitney%20U%20toets%20I-Python.html">
+   Toepassing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09%20Friedmans%20ANOVA%20I-Python.html">
+   Toepassing
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Toepassing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11%20Chi-kwadraat%20toets%20voor%20goodness%20of%20fit%20en%20binomiaaltoets-Python.html">
+   Toepassing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12%20McNemar%20toets-Python.html">
+   Toepassing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13%20Chi-kwadraat%20toets%20voor%20onafhankelijkheid%20en%20Fishers%20exacte%20toets-Python.html">
+   Toepassing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15%20Cochrans%20Q%20toets-Python.html">
+   Toepassing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16%20Chi-kwadraat%20toets%20voor%20onafhankelijkheid%20en%20Fisher-Freeman-Halton%20exacte%20toets%20I-Python.html">
+   Toepassing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="18%20Bhapkar%20toets-Python.html">
+   Toepassing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="21%20Chi-kwadraat%20toets%20voor%20goodness%20of%20fit%20en%20multinomiaaltoets-Python.html">
+   Toepassing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="26%20Tekentoets%20II-Python.html">
+   Toepassing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="27%20Moods%20mediaan%20toets-Python.html">
+   Toepassing
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/toetsen/10 Kruskal Wallis toets I-Python.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftoetsen/10 Kruskal Wallis toets I-Python.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/toetsen/10 Kruskal Wallis toets I-Python.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Toepassing
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#onderwijscasus">
+   Onderwijscasus
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#assumpties">
+   Assumpties
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#post-hoc-toets">
+   Post-hoc toets
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#effectmaat">
+   Effectmaat
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#uitvoering">
+   Uitvoering
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-data-bekijken">
+     De data bekijken
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-data-visualiseren">
+     De data visualiseren
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kruskal-wallis-toets">
+     Kruskal Wallis toets
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#post-hoc-toets-mann-whitney-u-toets">
+     Post-hoc toets: Mann-Whitney U toets
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rapportage">
+   Rapportage
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Toepassing</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Toepassing
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#onderwijscasus">
+   Onderwijscasus
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#assumpties">
+   Assumpties
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#post-hoc-toets">
+   Post-hoc toets
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#effectmaat">
+   Effectmaat
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#uitvoering">
+   Uitvoering
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-data-bekijken">
+     De data bekijken
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-data-visualiseren">
+     De data visualiseren
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kruskal-wallis-toets">
+     Kruskal Wallis toets
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#post-hoc-toets-mann-whitney-u-toets">
+     Post-hoc toets: Mann-Whitney U toets
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rapportage">
+   Rapportage
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <!-- ## CLOSEDBLOK: Functies.R --><!-- ## /OPENBLOK: Data-aanmaken.py -->
+<section class="tex2jax_ignore mathjax_ignore" id="toepassing">
+<h1>Toepassing<a class="headerlink" href="#toepassing" title="Permalink to this headline">#</a></h1>
+<!-- ## TEKSTBLOK: link1.py -->
+<p>Gebruik de <em>Kruskal Wallis toets</em> om te toetsen of de gemiddelde rangnummers van de verdelingen van twee of meer groepen van elkaar verschillen.<a class="footnote-reference brackets" href="#id17" id="id1">1</a><sup>, </sup>[&amp;17] De <em>Kruskal Wallis toets</em> kan een alternatief zijn voor de <span class="xref myst">one-way ANOVA</span>.<a class="footnote-reference brackets" href="#id18" id="id2">2</a> De <em>Kruskal Wallis toets</em> hoeft niet te voldoen aan de assumptie van normaliteit van de verdelingen van elke groep. Daarnaast hebben uitbijters bij de <em>Kruskal Wallis toets</em>  minder invloed op het eindresultaat dan bij de <span class="xref myst">one-way ANOVA</span>. Daarentegen, als de data wel normaal verdeeld is, heeft de <em>Kruskal Wallis toets</em> minder onderscheidend vermogen<a class="footnote-reference brackets" href="#id19" id="id3">4</a> dan de <span class="xref myst">one-way ANOVA</span>.<a class="footnote-reference brackets" href="#id20" id="id4">3</a> Vandaar dat ondanks de voordelen van de grotere robuustheid er toch minder vaak voor de <em>Kruskal Wallis toets</em> gekozen wordt.</p>
+<!-- ## /TEKSTBLOK: link1.py -->
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="onderwijscasus">
+<h1>Onderwijscasus<a class="headerlink" href="#onderwijscasus" title="Permalink to this headline">#</a></h1>
+<div id="casus">
+De opleidingsdirecteur van de tweejarige Masteropleiding Arbeidsrecht is geïnteresseerd in de afstudeersnelheid van haar studenten. Zij vraagt zich af of er een verschil zit in het type vooropleiding dat de studenten hebben gehaald en de hoeveel studiepunten die de studenten behalen in het eerste jaar. Zij kijkt naar de vier meest gangbare vooropleidingen die de studenten doorlopen voordat ze met de Master Arbeidsrecht beginnen: de Bachelors Fiscaal Recht, Notarieel Recht en Rechtsgeleerdheid en de Premaster. 
+<p>Dit onderzoek vertaalt zich in de volgende combinatie van hypothesen, waarbij de nulhypothese zo geformuleerd is dat er geen effect of verschil is en de alternatieve hypothese zo geformuleerd is dat er wel een effect of verschil is.</p>
+<p><em>H~0~</em>: Het gemiddelde rangnummer van de verdeling van het aantal behaalde studiepunten in het eerste jaar van de master Arbeidsrecht is gelijk voor de studenten met als vooropleidingen Bachelor Fiscaal Recht, Notarieel Recht of Rechtsgeleerdheid of de Premaster.</p>
+<p><em>H~A~</em>: Het gemiddelde rangnummer van de verdeling van het aantal behaalde studiepunten in het eerste jaar van de master Arbeidsrecht is niet gelijk voor de studenten met als vooropleiding Bachelor Fiscaal Recht, Notarieel Recht of Rechtsgeleerdheid of de Premaster.</p>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="assumpties">
+<h1>Assumpties<a class="headerlink" href="#assumpties" title="Permalink to this headline">#</a></h1>
+<!-- ## TEKSTBLOK: link2.py -->
+<p>Het meetniveau van de afhankelijke variabele is ordinaal<a class="footnote-reference brackets" href="#id21" id="id5">16</a> of continu.<a class="footnote-reference brackets" href="#id22" id="id6">6</a> In deze toetspagina staat een casus met continue data centraal; een casus met ordinale data met bijbehorende uitwerking is te vinden in de <span class="xref myst">Kruskal Wallis toets II</span>.</p>
+<!-- ## /TEKSTBLOK: link2.py -->
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="post-hoc-toets">
+<h1>Post-hoc toets<a class="headerlink" href="#post-hoc-toets" title="Permalink to this headline">#</a></h1>
+<!-- ## TEKSTBLOK: link3.py -->
+<p>De <em>Kruskal Wallis toets</em> toetst of twee of meerdere groepen van elkaar verschillen. Een post-hoc toets specificeert of groep significant van een andere groep verschilt. Gebruik de <span class="xref myst">Mann-Whitney U toets</span> als post-hoc toets. Hoewel het minder gebruikelijk is, is <em>Moods’mediaan toets</em> ook een optie als post-hoc toets. Deze toets toetst het verschil tussen de medianen van twee ongepaarde groepen. De <span class="xref myst">Mann-Whitney U toets</span> toetst het verschil tussen de verdelingen van twee ongepaarde groepen.</p>
+<!-- ## /TEKSTBLOK: link3.py -->
+<p>Gebruik een correctie voor de p-waarden, omdat er meerdere toetsen tegelijkertijd worden gebruikt. Meerdere toetsen tegelijkertijd uitvoeren verhoogt de kans dat een van de nulhypotheses onterecht wordt verworpen en er bij toeval een verband wordt ontdekt dat er niet is (type I fout). In deze toetspagina wordt de <em>Bonferroni correctie</em> gebruikt. Deze correctie past de p-waarde aan door de p-waarde te vermenigvuldigen met het aantal uitgevoerde toetsen en verlaagt hiermee de kans op een type I fout.<a class="footnote-reference brackets" href="#id23" id="id7">9</a> Een andere uitleg hiervan is dat het significantieniveau gedeeld wordt door het aantal toetsen wat leidt tot een lager significantieniveau en dus een strengere toets. Er zijn ook andere opties voor een correctie op de p-waarden.<a class="footnote-reference brackets" href="#id24" id="id8">5</a></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="effectmaat">
+<h1>Effectmaat<a class="headerlink" href="#effectmaat" title="Permalink to this headline">#</a></h1>
+<p>De p-waarde geeft aan of het verschil tussen groepen significant is. De grootte van het verschil of effect is echter ook relevant. Een effectmaat is een gestandaardiseerde maat die de grootte van een effect weergeeft, zodat effecten van verschillende onderzoeken met elkaar vergeleken kunnen worden.<a class="footnote-reference brackets" href="#id18" id="id9">2</a></p>
+<p>Bij de <em>Kruskal Wallis toets</em> wordt eta-squared (<em>η^2^</em>) als effectmaat gebruikt.<a class="footnote-reference brackets" href="#id25" id="id10">10</a> De effectmaat eta squared (<em>η^2^</em>) berekent de proportie van de variantie in de afhankelijke variabele die verklaard wordt door de onafhankelijke variabele. In deze casus berekent het de proportie van de variantie in het aantal studiepunten wat verklaard kan worden door de vooropleiding. Een indicatie om <em>η^2^</em> te interpreteren is: rond 0,01 is een klein effect, rond 0,06 is een gemiddeld effect en rond 0,14 is een groot effect.<a class="footnote-reference brackets" href="#id26" id="id11">11</a></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="uitvoering">
+<h1>Uitvoering<a class="headerlink" href="#uitvoering" title="Permalink to this headline">#</a></h1>
+<!-- ## TEKSTBLOK: Dataset-inladen.py-->
+<p>Er is een dataset <code class="docutils literal notranslate"><span class="pre">dfResultaten_Arbeidsrecht</span></code> ingeladen met studieresultaten van het eerste jaar van de master Arbeidsrecht per vooropleiding: Fiscaal Recht, Notarieel Recht, Rechtsgeleerdheid en de Premaster.</p>
+<!-- ## /TEKSTBLOK: Dataset-inladen.py-->
+<section id="de-data-bekijken">
+<h2>De data bekijken<a class="headerlink" href="#de-data-bekijken" title="Permalink to this headline">#</a></h2>
+<!-- ## TEKSTBLOK: Data-bekijken.py -->
+<p>Gebruik <code class="docutils literal notranslate"><span class="pre">&lt;dataframe&gt;.head()</span></code> en <code class="docutils literal notranslate"><span class="pre">&lt;dataframe&gt;.tail()</span></code> om de structuur van de data te bekijken.</p>
+<!-- ## /TEKSTBLOK: Data-bekijken.py -->
+<!-- ## OPENBLOK: Data-bekijken.py --><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="c1">## Eerste 6 observaties</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dfResultaten_Arbeidsrecht</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   Studentnummer    Vooropleiding  EC_Jaar1
+0        3807246        Premaster        42
+1        3915405        Premaster        36
+2        3188059    Fiscaal Recht        60
+3        3098956  Notarieel Recht        48
+4        3367486    Fiscaal Recht        48
+5        3590979        Premaster        12
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Laatste 6 observaties</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dfResultaten_Arbeidsrecht</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     Studentnummer      Vooropleiding  EC_Jaar1
+294        3442156          Premaster        42
+295        3757991  Rechtsgeleerdheid        54
+296        3783610  Rechtsgeleerdheid        36
+297        3055956      Fiscaal Recht        66
+298        3041376  Rechtsgeleerdheid         0
+299        3395844      Fiscaal Recht        60
+</pre></div>
+</div>
+</div>
+</div>
+<!-- ## /OPENBLOK: Data-bekijken.py -->
+<!-- ## TEKSTBLOK: Data-bekijken2.py -->
+<p>De dataset bevat data van studenten van verschillende vooropleidingen. Gebruik <code class="docutils literal notranslate"><span class="pre">&lt;data.frame&gt;.&lt;kolomnaam&gt;.unique()</span></code> om te onderzoeken welke opleidingen er in de data aanwezig zijn.</p>
+<!-- ## /TEKSTBLOK: Data-bekijken2.py -->
+<!-- ## OPENBLOK: Data-bekijken-2.py --><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Opleidingen in de data aanwezig</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dfResultaten_Arbeidsrecht</span><span class="p">[</span><span class="s1">&#39;Vooropleiding&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Premaster&#39; &#39;Fiscaal Recht&#39; &#39;Notarieel Recht&#39; &#39;Rechtsgeleerdheid&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<!-- ## /OPENBLOK: Data-bekijken-2.py -->
+<!-- ## TEKSTBLOK: Data-bekijken3.py -->
+<p>Inspecteer om meer inzicht te krijgen in de data de groepen met <code class="docutils literal notranslate"><span class="pre">.size()</span></code> en <code class="docutils literal notranslate"><span class="pre">.quantile()</span></code>. Groepeer hiervoor eerst met <code class="docutils literal notranslate"><span class="pre">&lt;dataframe&gt;.groupby([&lt;column&gt;])</span></code>. De mediaan is gelijk aan kwantiel <code class="docutils literal notranslate"><span class="pre">0.5</span></code>.</p>
+<!-- ## /TEKSTBLOK: Data-bekijken3.py -->
+<!-- ## OPENBLOK: Data-beschrijven.py --><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">dfResultaten_Arbeidsrecht</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Vooropleiding&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Vooropleiding
+Fiscaal Recht        71
+Notarieel Recht      77
+Premaster            81
+Rechtsgeleerdheid    71
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">dfResultaten_Arbeidsrecht</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Vooropleiding&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                        Studentnummer  EC_Jaar1
+Vooropleiding                                  
+Fiscaal Recht     0.25      3326401.5      30.0
+                  0.50      3609937.0      54.0
+                  0.75      3787836.0      66.0
+Notarieel Recht   0.25      3168105.0      42.0
+                  0.50      3543586.0      54.0
+                  0.75      3778668.0      60.0
+Premaster         0.25      3264950.0      30.0
+                  0.50      3494636.0      42.0
+                  0.75      3704366.0      54.0
+Rechtsgeleerdheid 0.25      3175899.5      21.0
+                  0.50      3435286.0      36.0
+                  0.75      3720481.0      48.0
+</pre></div>
+</div>
+</div>
+</div>
+<!-- ## /OPENBLOK: Data-beschrijven.py -->
+<!-- ## CLOSEDBLOK: Data-beschrijven.py -->
+<div class="highlight-{python notranslate"><div class="highlight"><pre><span></span>import numpy as np
+EC_FSC = np.array(dfResultaten_Arbeidsrecht[dfResultaten_Arbeidsrecht[&#39;Vooropleiding&#39;] == &quot;Fiscaal Recht&quot;][&quot;EC_Jaar1&quot;])
+EC_NTR = np.array(dfResultaten_Arbeidsrecht[dfResultaten_Arbeidsrecht[&#39;Vooropleiding&#39;] == &quot;Notarieel Recht&quot;][&quot;EC_Jaar1&quot;])
+EC_PRE = np.array(dfResultaten_Arbeidsrecht[dfResultaten_Arbeidsrecht[&#39;Vooropleiding&#39;] == &quot;Premaster&quot;][&quot;EC_Jaar1&quot;])
+EC_REC = np.array(dfResultaten_Arbeidsrecht[dfResultaten_Arbeidsrecht[&#39;Vooropleiding&#39;] == &quot;Rechtsgeleerdheid&quot;][&quot;EC_Jaar1&quot;])
+
+vN_FIS = len(EC_FSC)
+vN_NOT = len(EC_NTR)
+vN_RCH = len(EC_PRE)
+vN_PM = len(EC_REC)
+
+vQ1_FIS = np.quantile(EC_FSC, 0.25)
+vQ1_NOT = np.quantile(EC_NTR, 0.25)
+vQ1_PM = np.quantile(EC_PRE, 0.25)
+vQ1_RCH = np.quantile(EC_REC, 0.25)
+
+vMed_FIS = np.quantile(EC_FSC, 0.5)
+vMed_NOT = np.quantile(EC_NTR, 0.5)
+vMed_RCH = np.quantile(EC_REC, 0.5)
+vMed_PM = np.quantile(EC_PRE, 0.5)
+
+vQ3_FIS = np.quantile(EC_FSC, 0.75)
+vQ3_NOT = np.quantile(EC_NTR, 0.75)
+vQ3_RCH = np.quantile(EC_REC, 0.75)
+vQ3_PM = np.quantile(EC_PRE, 0.75)
+</pre></div>
+</div>
+<!-- ## /CLOSEDBLOK: Data-beschrijven.py -->
+<!-- ## TEKSTBLOK: Data-beschrijven.py -->
+<ul class="simple">
+<li><p>Mediaan Fiscaal Recht is <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">Round_and_format(py$vMed_FIS)</span></code>, <em>n</em> = <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">py$vN_FIS</span></code>.</p></li>
+<li><p>Mediaan Notarieel Recht is <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">Round_and_format(py$vMed_NOT)</span></code>, <em>n</em> = <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">py$vN_NOT</span></code>.</p></li>
+<li><p>Mediaan Premaster is <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">Round_and_format(py$vMed_PM)</span></code>, <em>n</em> = <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">py$vN_PM</span></code>.</p></li>
+<li><p>Mediaan Rechtsgeleerdheid is <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">Round_and_format(py$vMed_RCH)</span></code>, <em>n</em> = <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">py$vN_RCH</span></code>.</p></li>
+</ul>
+<!-- ## /TEKSTBLOK: Data-beschrijven.py -->
+</section>
+<section id="de-data-visualiseren">
+<h2>De data visualiseren<a class="headerlink" href="#de-data-visualiseren" title="Permalink to this headline">#</a></h2>
+<p>Geef de verdeling van de verschillende vooropleidingen visueel weer met een histogram.<a class="footnote-reference brackets" href="#id27" id="id12">18</a></p>
+<!-- ## OPENBLOK: Histogram.py --><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Laad seaborn of facets te maken</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sb</span>
+<span class="c1"># Laad matplotlib.pyplot om plots te maken</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Maak een facet plot met een histogram voor elke vooropleiding</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">sb</span><span class="o">.</span><span class="n">FacetGrid</span><span class="p">(</span><span class="n">dfResultaten_Arbeidsrecht</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s2">&quot;Vooropleiding&quot;</span><span class="p">)</span>
+<span class="n">g</span> <span class="o">=</span> <span class="p">(</span><span class="n">g</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">,</span> <span class="s2">&quot;EC_Jaar1&quot;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">set_axis_labels</span><span class="p">(</span><span class="s2">&quot;Aantal studiepunten jaar 1&quot;</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/10 Kruskal Wallis toets I-Python_13_0.png" src="../_images/10 Kruskal Wallis toets I-Python_13_0.png" />
+</div>
+</div>
+<!-- ## /OPENBLOK: Histogram.py -->
+<p>Allereerst valt op dat de verdeling enigszins discreet is. Aangezien er in deze casus zes studiepunten per vak te verdienen zijn met een totaal van 60 in het eerste jaar, bestaan de histogrammen uit staven waartussen de verschillen zes studiepunten zijn. De verdeling van alle vier de vooropleidingen zijn niet normaal maar scheef verdeeld. Met uitzondering van de vooropleiding Rechtsgeleerdheid ligt de top op 60 studiepunten en is er een staart links daarvan.</p>
+</section>
+<section id="kruskal-wallis-toets">
+<h2>Kruskal Wallis toets<a class="headerlink" href="#kruskal-wallis-toets" title="Permalink to this headline">#</a></h2>
+<!-- ## TEKSTBLOK: Kruskal-Wallis-test-1.py -->
+<p>Voer de <em>Kruskal Wallis toets</em> uit om te onderzoeken of er verschillen zijn in het aantal studiepunten in het eerste jaar tussen de studenten van de master Arbeidsrecht met vier verschillende vooropleidingen   Gebruik de functie <code class="docutils literal notranslate"><span class="pre">kruskal()</span></code> van het package <code class="docutils literal notranslate"><span class="pre">scipy</span></code> met als argumenten vier variabelen met het aantal studiepunten <code class="docutils literal notranslate"><span class="pre">EC_Jaar1</span></code> voor elk van de vier vooropleidingen. Bij deze functie toetst Python standaard tweezijdig.</p>
+<!-- ## /TEKSTBLOK: Kruskal-Wallis-test-1.py -->
+<!-- ## OPENBLOK: Kruskal-Wallis-test-2.py --><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Maak een variabele met het aantal studiepunten voor elke vooropleiding</span>
+<span class="n">EC_FSC</span> <span class="o">=</span> <span class="n">dfResultaten_Arbeidsrecht</span><span class="p">[</span><span class="n">dfResultaten_Arbeidsrecht</span><span class="p">[</span><span class="s1">&#39;Vooropleiding&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Fiscaal Recht&quot;</span><span class="p">][</span><span class="s2">&quot;EC_Jaar1&quot;</span><span class="p">]</span>
+<span class="n">EC_NTR</span> <span class="o">=</span> <span class="n">dfResultaten_Arbeidsrecht</span><span class="p">[</span><span class="n">dfResultaten_Arbeidsrecht</span><span class="p">[</span><span class="s1">&#39;Vooropleiding&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Notarieel Recht&quot;</span><span class="p">][</span><span class="s2">&quot;EC_Jaar1&quot;</span><span class="p">]</span>
+<span class="n">EC_PRE</span> <span class="o">=</span> <span class="n">dfResultaten_Arbeidsrecht</span><span class="p">[</span><span class="n">dfResultaten_Arbeidsrecht</span><span class="p">[</span><span class="s1">&#39;Vooropleiding&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Premaster&quot;</span><span class="p">][</span><span class="s2">&quot;EC_Jaar1&quot;</span><span class="p">]</span>
+<span class="n">EC_REC</span> <span class="o">=</span> <span class="n">dfResultaten_Arbeidsrecht</span><span class="p">[</span><span class="n">dfResultaten_Arbeidsrecht</span><span class="p">[</span><span class="s1">&#39;Vooropleiding&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Rechtsgeleerdheid&quot;</span><span class="p">][</span><span class="s2">&quot;EC_Jaar1&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Voer de Kruskal Wallis toets uit</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">sp</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">kruskal</span><span class="p">(</span><span class="n">EC_FSC</span><span class="p">,</span> <span class="n">EC_NTR</span><span class="p">,</span> <span class="n">EC_PRE</span><span class="p">,</span> <span class="n">EC_REC</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KruskalResult(statistic=44.55700466208389, pvalue=1.1492264323603119e-09)
+</pre></div>
+</div>
+</div>
+</div>
+<!-- ## /OPENBLOK: Kruskal-Wallis-test-2.py -->
+<p>Bereken de effectmaat <em>η^2^</em> vervolgens op basis van de <em>χ^2^</em>-waarde van de <em>Kruskal-Wallis toets</em>.</p>
+<!-- ## OPENBLOK: Kruskal-Wallis-test-3.py --><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sla de teststatistiek op</span>
+<span class="n">stat</span><span class="p">,</span> <span class="n">pval</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">kruskal</span><span class="p">(</span><span class="n">EC_FSC</span><span class="p">,</span> <span class="n">EC_NTR</span><span class="p">,</span> <span class="n">EC_PRE</span><span class="p">,</span> <span class="n">EC_REC</span><span class="p">)</span>
+
+<span class="c1"># Bereken eta squared</span>
+<span class="n">Eta_squared</span> <span class="o">=</span> <span class="n">stat</span> <span class="o">/</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dfResultaten_Arbeidsrecht</span><span class="p">[</span><span class="s1">&#39;EC_Jaar1&#39;</span><span class="p">])</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Print de effectgrootte</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Eta_squared</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.14902008248188592
+</pre></div>
+</div>
+</div>
+</div>
+<!-- ## /OPENBLOK: Kruskal-Wallis-test-3.py --><!-- ## CLOSEDBLOK: Kruskal-Wallis-test-4.py --><!-- ## /CLOSEDBLOK: Kruskal-Wallis-test-4.py -->
+<!-- ## TEKSTBLOK: Kruskal-Wallis-test-5.py -->
+<ul class="simple">
+<li><p><em>df</em>: het aantal groepen - 1 = <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">py$df</span></code></p></li>
+<li><p><em>H</em> = <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">Round_and_format(py$stat)</span></code>, <em>df</em> = <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">py$df</span></code>, <em>p</em> &lt; 0,0001, <em>η^2^</em> = <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">Round_and_format(py$Eta_squared)</span></code>  <a class="footnote-reference brackets" href="#id28" id="id13">13</a></p></li>
+<li><p>p-waarde &lt; 0,05, dus de H~0~ wordt verworpen<a class="footnote-reference brackets" href="#id29" id="id14">14</a></p></li>
+<li><p>Eta squared is <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">Round_and_format(py$Eta_squared)</span></code> wat duidt op een gemiddeld tot groot effect</p></li>
+</ul>
+<!-- ## /TEKSTBLOK: Kruskal-Wallis-test-5.py --></section>
+<section id="post-hoc-toets-mann-whitney-u-toets">
+<h2>Post-hoc toets: Mann-Whitney U toets<a class="headerlink" href="#post-hoc-toets-mann-whitney-u-toets" title="Permalink to this headline">#</a></h2>
+<!-- ## TEKSTBLOK: Mann-Whitney-U-test.py -->
+<p>Gebruik de <em>Mann-Whitney U toets</em> als post-hoc toets om te bepalen wélke groepen significant verschillen. De <em>Mann-Whitney U toets</em> wordt ook wel de <em>Wilcoxon rank-sum toets</em> genoemd.<a class="footnote-reference brackets" href="#id25" id="id15">10</a> Gebruik de functie <code class="docutils literal notranslate"><span class="pre">pg.mwu()</span></code>.</p>
+<!-- ## /TEKSTBLOK: Mann-Whitney-U-test.py -->
+<!-- ## OPENBLOK: Mann-Whitney-U-test.py --><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scikit_posthocs</span> <span class="k">as</span> <span class="nn">skph</span>
+
+<span class="n">skph</span><span class="o">.</span><span class="n">posthoc_mannwhitney</span><span class="p">(</span><span class="n">dfResultaten_Arbeidsrecht</span><span class="p">,</span> <span class="n">val_col</span> <span class="o">=</span> <span class="s1">&#39;EC_Jaar1&#39;</span><span class="p">,</span> <span class="n">group_col</span> <span class="o">=</span> <span class="s1">&#39;Vooropleiding&#39;</span><span class="p">,</span> <span class="n">p_adjust</span> <span class="o">=</span> <span class="s1">&#39;bonferroni&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Fiscaal Recht</th>
+      <th>Notarieel Recht</th>
+      <th>Premaster</th>
+      <th>Rechtsgeleerdheid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Fiscaal Recht</th>
+      <td>1.000000e+00</td>
+      <td>1.000000e+00</td>
+      <td>0.003341</td>
+      <td>5.709098e-07</td>
+    </tr>
+    <tr>
+      <th>Notarieel Recht</th>
+      <td>1.000000e+00</td>
+      <td>1.000000e+00</td>
+      <td>0.011389</td>
+      <td>1.214361e-07</td>
+    </tr>
+    <tr>
+      <th>Premaster</th>
+      <td>3.341440e-03</td>
+      <td>1.138931e-02</td>
+      <td>1.000000</td>
+      <td>2.170487e-02</td>
+    </tr>
+    <tr>
+      <th>Rechtsgeleerdheid</th>
+      <td>5.709098e-07</td>
+      <td>1.214361e-07</td>
+      <td>0.021705</td>
+      <td>1.000000e+00</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<!-- ## /OPENBLOK: Mann-Whitney-U-test.py-->
+<!-- ## CLOSEDBLOK: Mann-Whitney-U-test1.py --><!-- ## /CLOSEDBLOK: Mann-Whitney-U-test1.py -->
+<!-- ## TEKSTBLOK: link4.py -->
+<p>De <span class="xref myst">Mann-Whitney U toets</span> gebruikt het gemiddelde rangnummer van twee ongepaarde groepen om de significantie van de toets te bepalen. Met behulp van het gemiddelde rangnummer kan bepaald worden welke groep hogere rangnummers heeft wat een benadering is voor het verschil tussen twee verdelingen.<a class="footnote-reference brackets" href="#id30" id="id16">15</a> In deze casus heeft de vooropleiding met een hoger rangnummer dus over het algemeen studenten met een hoger aantal studiepunten. Bereken en rapporteer daarom het gemiddelde rangnummer.</p>
+<!-- ## /TEKSTBLOK: link4.py -->
+<!-- ## OPENBLOK: Mann-Whitney-U-test2.py --><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="k">def</span> <span class="nf">Gemiddelde_rangschikking</span><span class="p">(</span><span class="n">Vooropleiding_1</span><span class="p">,</span> <span class="n">Vooropleiding_2</span><span class="p">):</span>
+  <span class="c1"># Bind alle observaties in een variabele</span>
+  <span class="n">Aantal_studiepunten</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">Vooropleiding_1</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">Vooropleiding_2</span><span class="p">)))</span>
+  
+  <span class="c1"># Maak een variabele die aangeeft in welke groep de observatie zit</span>
+  <span class="n">Groepsindicator</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">Vooropleiding_1</span><span class="p">),[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">Vooropleiding_2</span><span class="p">)])</span>
+
+  <span class="c1"># Bereken de rangschikkingen van alle observaties</span>
+  <span class="n">Rangschikkingen</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">rankdata</span><span class="p">(</span><span class="n">Aantal_studiepunten</span><span class="p">)</span>
+
+  <span class="c1"># Bereken de gemiddelde rangschikking voor beide vooropleidingen</span>
+  <span class="n">Gemiddelde_rangschikking_Vooropleiding_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">Rangschikkingen</span><span class="p">[</span><span class="n">Groepsindicator</span> <span class="o">==</span> <span class="mi">1</span><span class="p">])</span>
+  <span class="n">Gemiddelde_rangschikking_Vooropleiding_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">Rangschikkingen</span><span class="p">[</span><span class="n">Groepsindicator</span> <span class="o">==</span> <span class="mi">2</span><span class="p">])</span>
+  <span class="c1"># Print resultaten</span>
+  <span class="k">return</span> <span class="p">[</span><span class="n">Gemiddelde_rangschikking_Vooropleiding_1</span><span class="p">,</span> <span class="n">Gemiddelde_rangschikking_Vooropleiding_2</span><span class="p">];</span>
+
+<span class="c1"># Definieer variabelen die observaties bevatten voor de verschillende vooropleidingen</span>
+<span class="n">Studiepunten_Fiscaal_Recht</span> <span class="o">=</span> <span class="n">dfResultaten_Arbeidsrecht</span><span class="p">[</span><span class="n">dfResultaten_Arbeidsrecht</span><span class="p">[</span><span class="s1">&#39;Vooropleiding&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Fiscaal Recht&quot;</span><span class="p">][</span><span class="s2">&quot;EC_Jaar1&quot;</span><span class="p">]</span>
+<span class="n">Studiepunten_Notarieel_Recht</span> <span class="o">=</span> <span class="n">dfResultaten_Arbeidsrecht</span><span class="p">[</span><span class="n">dfResultaten_Arbeidsrecht</span><span class="p">[</span><span class="s1">&#39;Vooropleiding&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Notarieel Recht&quot;</span><span class="p">][</span><span class="s2">&quot;EC_Jaar1&quot;</span><span class="p">]</span>
+<span class="n">Studiepunten_Premaster</span> <span class="o">=</span> <span class="n">dfResultaten_Arbeidsrecht</span><span class="p">[</span><span class="n">dfResultaten_Arbeidsrecht</span><span class="p">[</span><span class="s1">&#39;Vooropleiding&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Premaster&quot;</span><span class="p">][</span><span class="s2">&quot;EC_Jaar1&quot;</span><span class="p">]</span>
+<span class="n">Studiepunten_Rechtsgeleerdheid</span> <span class="o">=</span> <span class="n">dfResultaten_Arbeidsrecht</span><span class="p">[</span><span class="n">dfResultaten_Arbeidsrecht</span><span class="p">[</span><span class="s1">&#39;Vooropleiding&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Rechtsgeleerdheid&quot;</span><span class="p">][</span><span class="s2">&quot;EC_Jaar1&quot;</span><span class="p">]</span>
+
+
+<span class="c1"># Bereken de gemiddelde rangschikkingen voor elke vergelijking</span>
+<span class="n">Gem_FR_NR_1</span><span class="p">,</span> <span class="n">Gem_FR_NR_2</span> <span class="o">=</span> <span class="n">Gemiddelde_rangschikking</span><span class="p">(</span><span class="n">Studiepunten_Fiscaal_Recht</span><span class="p">,</span> <span class="n">Studiepunten_Notarieel_Recht</span><span class="p">)</span>
+
+<span class="n">Gem_FR_PM_1</span><span class="p">,</span> <span class="n">Gem_FR_PM_2</span> <span class="o">=</span> <span class="n">Gemiddelde_rangschikking</span><span class="p">(</span><span class="n">Studiepunten_Fiscaal_Recht</span><span class="p">,</span> <span class="n">Studiepunten_Premaster</span><span class="p">)</span>
+
+<span class="n">Gem_FR_RG_1</span><span class="p">,</span> <span class="n">Gem_FR_RG_2</span> <span class="o">=</span> <span class="n">Gemiddelde_rangschikking</span><span class="p">(</span><span class="n">Studiepunten_Fiscaal_Recht</span><span class="p">,</span> <span class="n">Studiepunten_Rechtsgeleerdheid</span><span class="p">)</span>
+
+<span class="n">Gem_NR_PM_1</span><span class="p">,</span> <span class="n">Gem_NR_PM_2</span> <span class="o">=</span> <span class="n">Gemiddelde_rangschikking</span><span class="p">(</span><span class="n">Studiepunten_Notarieel_Recht</span><span class="p">,</span> <span class="n">Studiepunten_Premaster</span><span class="p">)</span>
+
+<span class="n">Gem_NR_RG_1</span><span class="p">,</span> <span class="n">Gem_NR_RG_2</span> <span class="o">=</span> <span class="n">Gemiddelde_rangschikking</span><span class="p">(</span><span class="n">Studiepunten_Notarieel_Recht</span><span class="p">,</span> <span class="n">Studiepunten_Rechtsgeleerdheid</span><span class="p">)</span>
+
+<span class="n">Gem_PM_RG_1</span><span class="p">,</span> <span class="n">Gem_PM_RG_2</span> <span class="o">=</span> <span class="n">Gemiddelde_rangschikking</span><span class="p">(</span><span class="n">Studiepunten_Premaster</span><span class="p">,</span> <span class="n">Studiepunten_Rechtsgeleerdheid</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<!-- ## /OPENBLOK: Mann-Whitney-U-test2.py -->
+<!-- ## TEKSTBLOK: Mann-Whitney-U-test3.py -->
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Vergelijking</p></th>
+<th class="head"><p>p-waarde</p></th>
+<th class="head"><p>Gemiddelde rangschikking (links)</p></th>
+<th class="head"><p>Gemiddelde rangschikking (rechts)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>FR vs. NR</p></td>
+<td><p>1,00 <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">#Round_and_format(abs(py$p_FR_NR))</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">Round_and_format(py$Gem_FR_NR_1)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">Round_and_format(py$Gem_FR_NR_2)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>FR vs. PM</p></td>
+<td><p>0,10 <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">#Round_and_format(abs(py$p_FR_PM))</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">Round_and_format(py$Gem_FR_PM_1)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">Round_and_format(py$Gem_FR_PM_2)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>FR vs. RG</p></td>
+<td><p>&lt; 0,0001 <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">#Round_and_format(abs(py$p_FR_RG))</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">Round_and_format(py$Gem_FR_RG_1)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">Round_and_format(py$Gem_FR_RG_2)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>NR vs. PM</p></td>
+<td><p>0,02 <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">#Round_and_format(abs(py$p_NR_PM))</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">Round_and_format(py$Gem_NR_PM_1)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">Round_and_format(py$Gem_NR_PM_2)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>NR vs. RG</p></td>
+<td><p>&lt; 0,0001 <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">#Round_and_format(abs(py$p_NR_RG))</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">Round_and_format(py$Gem_NR_RG_1)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">Round_and_format(py$Gem_NR_RG_2)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>PM vs. RG</p></td>
+<td><p>0,03 <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">#Round_and_format(abs(py$p_PM_RG))</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">Round_and_format(py$Gem_PM_RG_1)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">Round_and_format(py$Gem_PM_RG_2)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><em>Tabel 1. Resultaten post-hoc toetsen voor vergelijking Fiscaal Recht (FR), Notarieel Recht (NR), Premaster (PM) en Rechtsgeleerdheid (RG).</em></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p>Als voorbeeld wordt de bovenste rij van Tabel 1 in woorden uitgelegd. Er is geen  significant verschil gevonden tussen Fiscaal (Gemiddelde rangschikking = <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">Round_and_format(py$Gem_FR_NR_1)</span></code>,  <em>n</em>=<code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">py$vN_FIS</span></code>) Recht en Notarieel Recht (Gemiddelde rangschikking = <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">Round_and_format(py$Gem_FR_NR_2)</span></code>,  <em>n</em>=<code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">py$vN_NOT</span></code>), <em>p</em>=1,00.</p>
+<!-- ## /TEKSTBLOK: Mann-Whitney-U-test3.py --></section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="rapportage">
+<h1>Rapportage<a class="headerlink" href="#rapportage" title="Permalink to this headline">#</a></h1>
+<!-- ## TEKSTBLOK: Rapportage.py -->
+<p>De <em>Kruskal Wallis toets</em> is uitgevoerd om te toetsen of er verschillen zijn tussen de studenten van de Master Arbeidsrecht met als vooropleiding Bachelor Fiscaal Recht, Notarieel Recht of Rechtsgeleerdheid of de Premaster wat betreft de verdeling van het aantal studiepunten dat de studenten in het eerste jaar behalen. Uit de resultaten kan afgelezen worden dat er een significant verschil is tussen de verdelingen van het aantal studiepunten voor de verschillende vooropleidingen, <em>H</em> = <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">Round_and_format(py$stat)</span></code>, <em>df</em> = <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">py$df</span></code>, <em>p</em> &lt; 0,0001, <em>η^2^</em> = <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">Round_and_format(py$Eta_squared)</span></code>. De resultaten ondersteunen de conclusie dat er een verschil is tussen studenten van de vier verschillende vooropleidingen wat betreft de verdeling van de hoeveelheid studiepunten die studenten behalen tijdens het eerste jaar van de master Arbeidsrecht.</p>
+<p>De <span class="xref myst">Mann-Whitney U toets</span> is uitgevoerd als post-hoc toets om te onderzoeken welke vooropleidingen van elkaar verschillen qua aantal studiepunten dat studenten behalen.  De studenten met Rechtsgeleerdheid als vooropleiding behalen significant minder punten bij de Master Arbeidsrecht, dan de studenten met een andere vooropleiding. Er is ook een significant verschil gevonden tussen de behaalde studiepunten van studenten met de vooropleiding Notarieel Recht en de Premaster, waarbij de studenten van de Premaster minder punten behaalden dan de studenten van Notarieel Recht. Er zijn geen significante verschillen gevonden tussen de vooropleidingen Fiscaal Recht en Notarieel Recht, en Fiscaal Recht en Premaster. De <em>Bonferroni correctie</em> is gebruikt om de Type I fout te voorkomen die gepaard gaat met het veelvuldig toetsen. De gemiddelde rangschikkingen en p-waarden van de post-hoc toetsen zijn te vinden in Tabel 1.</p>
+<!-- ## /TEKSTBLOK: Rapportage.py -->
+<!-- ## CLOSEDBLOK: Footer.R --><!-- ## /CLOSEDBLOK: Footer.R -->
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>De toets rangschikt de datapunten van laag naar hoog en geeft elke datapunt een rangnummer. Vervolgens wordt per groep het gemiddelde berekend van de rangnummers. Deze gemiddelden wordt met elkaar vergeleken. Voor meer informatie lees: Field, A., Miles, J., &amp; Field, Z. (2012). <em>Discovering statistics using R</em>. London: Sage publications.</p>
+</dd>
+<dt class="label" id="id18"><span class="brackets">2</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id9">2</a>)</span></dt>
+<dd><p>Van Geloven, N. (21 maart 2018). <em>Kruskal Wallis</em>. <a class="reference external" href="https://wikistatistiek.amc.nl/index.php/Kruskal_Wallis">Wiki Statistiek Academisch Medisch Centrum</a>.</p>
+</dd>
+<dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id3">4</a></span></dt>
+<dd><p>Onderscheidend vermogen, in het Engels power genoemd, is de kans dat de nulhypothese verworpen wordt wanneer de alternatieve hypothese ‘waar’ is.</p>
+</dd>
+<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id4">3</a></span></dt>
+<dd><p>Universiteit van Amsterdam (7 juli 2014). <em>Kruskal-Wallis Test</em>. <a class="reference external" href="https://wiki.uva.nl/methodologiewinkel/index.php/Kruskal-Wallis_Test">UvA Wiki Methodologiewinkel</a>.</p>
+</dd>
+<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id5">16</a></span></dt>
+<dd><p>Een ordinale variabele is een categorische variabele waarbij de categorieën geordend kunnen worden. Een voorbeeld is de variabele beoordeling met de categorieën Onvoldoende, Voldoende, Goed en Uitstekend.</p>
+</dd>
+<dt class="label" id="id22"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
+<dd><p>Van Geloven, N. (21 November 2017). <em>KEUZE TOETS</em>. <a class="reference external" href="https://wikistatistiek.amc.nl/index.php/KEUZE_TOETS">Wiki Statistiek Academisch Medisch Centrum</a>.</p>
+</dd>
+<dt class="label" id="id23"><span class="brackets"><a class="fn-backref" href="#id7">9</a></span></dt>
+<dd><p>Universiteit van Amsterdam (7 juli 2014). <em>Kruskal-Wallis Test</em>. <a class="reference external" href="https://wiki.uva.nl/methodologiewinkel/index.php/Kruskal-Wallis_Test">UvA Wiki Methodologiewinkel</a>.</p>
+</dd>
+<dt class="label" id="id24"><span class="brackets"><a class="fn-backref" href="#id8">5</a></span></dt>
+<dd><p>Field, A., Miles, J., &amp; Field, Z. (2012). <em>Discovering statistics using R</em>. London: Sage publications.</p>
+</dd>
+<dt class="label" id="id25"><span class="brackets">10</span><span class="fn-backref">(<a href="#id10">1</a>,<a href="#id15">2</a>)</span></dt>
+<dd><p>De effectmaat <em>η^2^</em> wordt voor de <em>Kruskal-Wallis toets</em> berekend door de <em>χ^2^</em>-waarde te delen door het totaal aantal observaties minus één, i.e. <span class="math notranslate nohighlight">\(\frac{\chi^2}{N-1} \)</span>.</p>
+</dd>
+<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id11">11</a></span></dt>
+<dd><p>Allen, P. &amp; Bennett, K. (2012). <em>SPSS A practical Guide version 20.0</em>. Cengage Learning Australia Pty Limited.</p>
+</dd>
+<dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id12">18</a></span></dt>
+<dd><p>De breedte van de staven van het histogram wordt vaak automatisch bepaald, maar kan handmatig aangepast worden. Aangezien de breedte van de staven bepalend zijn voor de indruk die de visualisatie geeft, is het verstandig om hier goed op te letten.</p>
+</dd>
+<dt class="label" id="id28"><span class="brackets"><a class="fn-backref" href="#id13">13</a></span></dt>
+<dd><p>De test-statistiek <em>H</em> volgt bij benadering de chi-kwadraat verdeling. Onder deze hypothese is <em>H</em> chi-kwadraat, vandaar dat dit in de output uitgedrukt wordt in chi-kwadraat.</p>
+</dd>
+<dt class="label" id="id29"><span class="brackets"><a class="fn-backref" href="#id14">14</a></span></dt>
+<dd><p>In dit voorbeeld wordt uitgegaan van een waarschijnlijkheid van 95% c.q. een p-waardegrens van 0,05. De grens is naar eigen inzicht aan te passen; houd hierbij rekening met Type I en Type II fouten.</p>
+</dd>
+<dt class="label" id="id30"><span class="brackets"><a class="fn-backref" href="#id16">15</a></span></dt>
+<dd><p>Field, A. (2013). <em>Discovering statistics using IBM SPSS statistics</em>. Sage.</p>
+</dd>
+</dl>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./toetsen"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="09%20Friedmans%20ANOVA%20I-Python.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Toepassing</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="11%20Chi-kwadraat%20toets%20voor%20goodness%20of%20fit%20en%20binomiaaltoets-Python.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Toepassing</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By The Jupyter Book Community<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
