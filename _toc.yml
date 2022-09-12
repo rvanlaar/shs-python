@@ -3,6 +3,8 @@
 
 format: jb-book
 root: intro
+options:
+  numbered: True
 chapters:
 - file: markdown
 - file: markdown-notebooks
@@ -11,7 +13,6 @@ chapters:
 - file: 'toetsen/02 Gepaarde t-toets-Python.ipynb'
 - file: 'toetsen/03 Ongepaarde t-toets-Python.ipynb'
 - file: 'toetsen/04 Repeated measures ANOVA-Python.ipynb'
-- file:  toetsen/04-Repeated-measures-ANOVA-Python.ipynb
 - file: 'toetsen/05 One-way ANOVA-Python.ipynb'
 - file: 'toetsen/06 Tekentoets I-Python.ipynb'
 - file: 'toetsen/07 Wilcoxon signed rank toets I-Python.ipynb'
@@ -20,15 +21,11 @@ chapters:
 - file: 'toetsen/09 Friedmans ANOVA I-Python.ipynb'
 - file: 'toetsen/10 Kruskal Wallis toets I-Python.ipynb'
 - file: 'toetsen/10 Kruskal Wallis toets-Python.ipynb'
-- file:  toetsen/10-Kruskal-Wallis-toets-Python.ipynb
 - file: 'toetsen/11 Chi-kwadraat toets voor goodness of fit en binomiaaltoets-Python.ipynb'
 - file: 'toetsen/12 McNemar toets-Python.ipynb'
-- file: 'toetsen/13 Chi-kwadraat toets en Fishers exact toets-Python.ipynb'
 - file: 'toetsen/13 Chi-kwadraat toets voor onafhankelijkheid en Fishers exacte toets-Python.ipynb'
-- file: 'toetsen/13 Chi-kwadraat toets voor onafhankelijkheid en Fishers exact toets-Python.ipynb'
 - file: 'toetsen/15 Cochrans Q toets-Python.ipynb'
 - file: 'toetsen/16 Chi-kwadraat toets voor onafhankelijkheid en Fisher-Freeman-Halton exacte toets I-Python.ipynb'
-- file: 'toetsen/16 Chi-kwadraat toets voor onafhankelijkheid en Fisher-Freeman-Halton exact toets I-Python.ipynb'
 - file: 'toetsen/18 Bhapkar toets-Python.ipynb'
 - file: 'toetsen/21 Chi-kwadraat toets voor goodness of fit en multinomiaaltoets-Python.ipynb'
 - file: 'toetsen/26 Tekentoets II-Python.ipynb'
