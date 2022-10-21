@@ -1,11 +1,17 @@
-# Welcome to your Jupyter Book
+# Statistisch Handboek Studiedata
+Het Statistisch Handboek Studiedata is gemaakt als onderdeel van het Versnellingsplan Onderwijsinnovatie met ICT. Het handboek dient als een gemeenschappelijk standaard voor het toetsen van analyses op studiedata in het hoger onderwijs om de validiteit en betrouwbaarheid van beleidsadviezen te waarborgen. Het handboek is geen vervanger van een cursus statistiek.
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+De basis voor het handboek is een Toetsmatrix, waarin de meest voorkomende toetsen afzonderlijk uitgewerkt zijn. Elke toets bevat:
 
-Check out the content pages bundled with this sample book to see more.
+* een omschrijving waarvoor een toets gebruikt kan worden
+* een casus uit het onderwijs
+* assumpties behorende bij de toetsen
+* code voor uitvoering in R en Python
+* rapportage van de output
+
+## Python
+Deze site bevat de python toetsen. De toetsmatrices zijn te vinden op de hoofdsite:
+[https://sh-studiedata.nl/](https://sh-studiedata.nl).
 
 ```{tableofcontents}
 ```

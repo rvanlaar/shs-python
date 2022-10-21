@@ -6,9 +6,6 @@ root: intro
 options:
   numbered: True
 chapters:
-- file: markdown
-- file: markdown-notebooks
-- file: notebooks
 - file: 'toetsen/01 One sample t-toets-Python.ipynb'
 - file: 'toetsen/02 Gepaarde t-toets-Python.ipynb'
 - file: 'toetsen/03 Ongepaarde t-toets-Python.ipynb'
